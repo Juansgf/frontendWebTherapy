@@ -1,0 +1,15 @@
+h1{
+    font-size: 3rem;
+    color: #ffa958;
+}
+
+#guardarC{
+    background-color: rgb(39, 161, 182);
+    border-color: rgb(39, 161, 182);
+    margin-right: 10%;
+}
+
+#Cancelar{
+    width: 150px;
+}
+

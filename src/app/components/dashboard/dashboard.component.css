@@ -1,0 +1,26 @@
+.container{
+    padding-top: 1rem;
+    text-align: center;
+    background-image: url('../../../assets/bgimage/GrayPaper.png');
+    color: black;
+    border: 2px solid;
+    border-color: gray;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+#publicarC{
+    background-color: rgb(39, 161, 182);
+    border-color: rgb(39, 161, 182);
+    
+}
+
+
+
+#boton1{
+    background-color:rgba(9, 46, 71, 0.788);
+    border-color: rgba(9, 46, 71, 0.788);
+    color:white;
+}

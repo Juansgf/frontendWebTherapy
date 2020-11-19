@@ -1,0 +1,13 @@
+<!--<h2 [ngIf] = "noHayNotis" [ngIfElse]="elseblock" >No tienes notificaciones aún<h2>-->
+  <br>
+  <br>
+  <div class="container">
+    <div class="alert alert-success" *ngFor="let noti of notis">
+      <p class="alert-heading"><img src={{noti.iconFrom}} height="50px" width="50px"/> {{noti.actionTime}}</p>
+      <p>{{noti.action}} a tu publicación "{{noti.postTitle}}"</p>
+      <hr>
+    </div>
+  </div>
+
+
+

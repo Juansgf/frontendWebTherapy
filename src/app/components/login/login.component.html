@@ -1,0 +1,17 @@
+
+<div class="container">
+  <hr>
+  <h2 class="page-header">INGRESAR</h2>
+  <form (submit)="onLoginSubmit()">
+    <div class="form-group">
+      <label>Correo electrónico</label>
+      <input type="text" [(ngModel)]="email" id="mailC" name="email" class="form-control" >
+    </div>
+    <div class="form-group">
+      <label>Contraseña</label>
+      <input type="password" id="passwordC" [(ngModel)]="password" name="password" class="form-control">
+    </div>
+    <input type="submit" id="loginC" class="btn btn-info" value="INGRESAR">
+  </form>
+</div>
+

@@ -1,0 +1,18 @@
+
+<div class="container editPost">
+    <div class="row size">
+        <div class="col editPlace col-md-8">
+            <p class="titleSt">Titulo</p><input [(ngModel)]="title" name="nombre" type="text" class="inputStyle">
+            <p class="contenSt">Contenido</p><input [(ngModel)]="cont" name="nombre" type="text" class="input2Style"></div>
+        <div class="col setButtons col-md-4">
+            <div class="row btns2Row">
+                <div class="col"><button (click)="updatePost()" class="btn btn-secondary" id="buttonGuardar" type="button">Guardar</button></div>
+            </div>
+            <div class="row btnsRow">
+                <div class="col"><button  (click)="cancelPost()" class="btn btn-secondary" id="buttonCan" type="button">Cancelar</button></div>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+

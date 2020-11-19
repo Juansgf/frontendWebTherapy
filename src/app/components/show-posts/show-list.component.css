@@ -1,0 +1,26 @@
+#DivTitulo{
+    border-color: gray !important; 
+    border-width: 2px !important;
+    background-color: white !important;
+}
+
+#FooterCards{
+    background-color:#ffa958;
+}
+
+#button1{
+    background-color: rgb(39, 161, 182);
+    border-color: rgb(39, 161, 182);
+    
+}
+
+#button2{
+    background-color:rgba(9, 46, 71, 0.788);
+    border-color: rgba(9, 46, 71, 0.788);
+}
+
+#button3{
+    background-color:rgba(0, 77, 177, 0.788);
+    border-color: rgba(0, 77, 177, 0.788);
+}
+

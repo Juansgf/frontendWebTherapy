@@ -1,0 +1,11 @@
+<ul>
+  <li><a  routerLinkActive="active-link" routerLink="/home">INICIO</a></li>
+  <li><a *ngIf="auth.loggedIn()" routerLinkActive="active-link" routerLink="/dashboard">TABLERO</a></li>
+  <li><a *ngIf="auth.loggedIn()" routerLinkActive="active-link" routerLink="/notifications"> NOTIFICACIONES</a></li>
+  <li><a *ngIf="auth.loggedIn()" routerLinkActive="active-link" routerLink="/administrators"> ADMINISTRADORES </a></li>
+  <li><a  *ngIf="!auth.loggedIn()"routerLinkActive="active-link" routerLink="/login">INGRESAR</a></li>
+  <li *ngIf="showP" id="perfilC"><a  *ngIf="auth.loggedIn()"routerLinkActive="active-link" routerLink="/profile">PERFIL</a></li>
+  <li ><a  *ngIf="!auth.loggedIn()"routerLinkActive="active-link" routerLink="/register">REGISTRARSE</a></li>
+  <li class="right"><a  *ngIf="auth.loggedIn()"class="log-out" (click)="onLogoutClick()" class="btn-danger">SALIR</a></li>
+</ul>
+

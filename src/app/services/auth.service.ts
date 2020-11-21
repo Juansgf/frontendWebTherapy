@@ -24,7 +24,7 @@ export class AuthService {
   registerUser(user) {
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/user/register', user, {
+    return this.http.post('https://desolate-reef-90306.herokuapp.com/user/register', user, {
       headers: headers,
       observe: 'response'
     }).pipe(map((res: HttpResponse<JSON>) => res));
@@ -36,7 +36,7 @@ export class AuthService {
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
     console.log(headers);
-    return this.http.post('http://localhost:3000/user/authenticate', user, {
+    return this.http.post('https://desolate-reef-90306.herokuapp.com/user/authenticate', user, {
       headers: headers,
       observe: 'response'
     }).pipe(map((res: HttpResponse<JSON>) => res));
@@ -52,7 +52,7 @@ export class AuthService {
     // console.log(this.authToken)
     headers = headers.set('Content-Type', 'application/json');
     // console.log(headers.get('Authorization'))
-    return this.http.get('http://localhost:3000/user/profile',{
+    return this.http.get('https://desolate-reef-90306.herokuapp.com/user/profile',{
       headers: headers,
       observe: 'response'
     }).pipe(map((res: any) => res));
@@ -61,7 +61,7 @@ export class AuthService {
   getUserPost(id) {
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json');
-    return this.http.get('http://localhost:3000/user/userPost/'+id,{
+    return this.http.get('https://desolate-reef-90306.herokuapp.com/user/userPost/'+id,{
       headers: headers,
       observe: 'response'
     }).pipe(map((res: any) => res));
@@ -75,7 +75,7 @@ export class AuthService {
     headers = headers.set('Authorization', this.authToken);
     headers = headers.set('Content-Type', 'application/json');
     console.log(id)
-    return this.http.put('http://localhost:3000/user/updateProfile/'+id, user,{
+    return this.http.put('https://desolate-reef-90306.herokuapp.com/user/updateProfile/'+id, user,{
       headers: headers,
       observe: 'response'
     }).pipe(map((res: HttpResponse<JSON>) => res));
@@ -85,7 +85,7 @@ export class AuthService {
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json');
     console.log(id)
-    return this.http.put('http://localhost:3000/user/editPost/'+id,post,{
+    return this.http.put('https://desolate-reef-90306.herokuapp.com/user/editPost/'+id,post,{
       headers: headers,
       observe: 'response'
     }).pipe(map((res: HttpResponse<JSON>) => res));
@@ -107,7 +107,7 @@ export class AuthService {
   registerPost(post) {
     let headers = new HttpHeaders();
     headers.append('Contet-Type', 'application/json');
-    return this.http.post('http://localhost:3000/user/newPost', post, {
+    return this.http.post('https://desolate-reef-90306.herokuapp.com/user/newPost', post, {
       headers: headers,
       observe: 'response'
     }).pipe(map((res: HttpResponse<JSON>) => res));
@@ -119,7 +119,7 @@ export class AuthService {
   }
 
   /*getAllPost(){
-    return this.http.get('http://localhost:3000/user/allPosts', {});
+    return this.http.get('/user/allPosts', {});
   }*/
 
 
@@ -127,7 +127,7 @@ export class AuthService {
     //this.createAuthenticationHeaders();
     let headers = new HttpHeaders();
     headers.append('Contet-Type', 'application/json');
-    return this.http.put('http://localhost:3000/user/updatePost/', postEdited, {
+    return this.http.put('/user/updatePost/', postEdited, {
       headers: headers,
       observe: 'response'
     }).pipe(map((res: HttpResponse<JSON>) => res));
@@ -138,7 +138,7 @@ export class AuthService {
     let headers = new HttpHeaders();
     headers.append('Contet-Type', 'application/json');
     console.log(idPost)
-    return this.http.delete('http://localhost:3000/user/deletePost/'+idPost);
+    return this.http.delete('https://desolate-reef-90306.herokuapp.com/user/deletePost/'+idPost);
 
   }
 
@@ -146,21 +146,21 @@ export class AuthService {
     const postData = {id:post._id,
     likes: post.likes};
     console.log(post.likes);
-    return this.http.post('http://localhost:3000/user/likePost/', postData)
+    return this.http.post('https://desolate-reef-90306.herokuapp.com/user/likePost/', postData)
   }
 
   dislikePost(post){
     const postData = {id:post._id,
       dislikes: post.dislikes};
       console.log(post.dislikes);
-      return this.http.post('http://localhost:3000/user/dislikePost/', postData)
+      return this.http.post('https://desolate-reef-90306.herokuapp.com/user/dislikePost/', postData)
   }
 
   getNotifications(idUser){
     const notiData = {
       _id: idUser
     };
-    return this.http.post('http://localhost:3000/user/showNotifications/', notiData)
+    return this.http.post('https://desolate-reef-90306.herokuapp.com/user/showNotifications/', notiData)
   }
 
   loadToken() {
@@ -181,18 +181,18 @@ export class AuthService {
   registerComment(comment) {
     let headers = new HttpHeaders();
     headers.append('Contet-Type', 'application/json');
-    return this.http.put('http://localhost:3000/user/addComment', comment, {
+    return this.http.put('https://desolate-reef-90306.herokuapp.com/user/addComment', comment, {
       headers: headers,
       observe: 'response'
     }).pipe(map((res: HttpResponse<JSON>) => res));
   }
 
   registerNotification(notification){
-    return this.http.post('http://localhost:3000/user/addNotification/', notification)
+    return this.http.post('https://desolate-reef-90306.herokuapp.com/user/addNotification/', notification)
   }
 
   getAdmins(){
-    return this.http.get('http://localhost:3000/user/getAdmins/')
+    return this.http.get('https://desolate-reef-90306.herokuapp.com/user/getAdmins/')
   }
 
 }

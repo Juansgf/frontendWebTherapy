@@ -32,7 +32,7 @@ export class ShowPostService {
         //if(this.id == this)
       });
 
-      return this.http.post('http://localhost:3000/user/allPosts',{})
+      return this.http.post('https://desolate-reef-90306.herokuapp.com/user/allPosts',{})
     }
 
     getAllPopularPost(){
@@ -43,7 +43,7 @@ export class ShowPostService {
         });
       });
 
-      return this.http.post('http://localhost:3000/user/mostLikedPosts',{})
+      return this.http.post('https://desolate-reef-90306.herokuapp.com/user/mostLikedPosts',{})
     }
 
     getAllAdminPost(){
@@ -53,10 +53,10 @@ export class ShowPostService {
           this.idPost = post.body
         });
       });
-      return this.http.post('http://localhost:3000/user/adminPosts',{})
+      return this.http.post('https://desolate-reef-90306.herokuapp.com/user/adminPosts',{})
     }
 
     reloadPosts() {
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['dashboard']);
     }
 }
